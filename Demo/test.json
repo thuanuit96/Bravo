@@ -1,0 +1,14 @@
+{
+    "person":[
+              {
+              "name": "thuanuit96@gmail.com",
+              "password": "thuan718",
+              "employed": "IT"
+              },
+              {
+              "name": "Vinny",
+              "age": "56",
+              "employed": "Enginer"
+              }
+              ]
+}    

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Demo
+
+  Created by asto on 1/14/19.
+  Copyright © 2019 asto. All rights reserved.
+*/
+
+Welcome = "共有アプリケーション";
+Download = "アプリケーション";

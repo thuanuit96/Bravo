@@ -1,0 +1,72 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2MO-cb-zj5"; */
+"2MO-cb-zj5.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2h0-UK-d4N"; */
+"2h0-UK-d4N.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "lbstart"; ObjectID = "4Dc-XL-CKR"; */
+"4Dc-XL-CKR.text" = "lbstart";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5Hq-28-GmD"; */
+"5Hq-28-GmD.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6RA-Br-GCY"; */
+"6RA-Br-GCY.text" = "Label";
+
+/* Class = "UILabel"; text = "lbName"; ObjectID = "7HY-YC-Mjg"; */
+"7HY-YC-Mjg.text" = "lbName";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "85x-lJ-OYP"; */
+"85x-lJ-OYP.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DEq-VS-d8H"; */
+"DEq-VS-d8H.text" = "Label";
+
+/* Class = "UILabel"; text = "lbEnd"; ObjectID = "Izj-eM-s3M"; */
+"Izj-eM-s3M.text" = "lbEnd";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "MkR-En-dYg"; */
+"MkR-En-dYg.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "P3a-YF-kIn"; */
+"P3a-YF-kIn.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Dowload"; ObjectID = "QSp-gS-4Xj"; */
+"QSp-gS-4Xj.normalTitle" = "Dowload";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Sdf-oh-mJC"; */
+"Sdf-oh-mJC.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Tv2-sO-eLF"; */
+"Tv2-sO-eLF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WVW-dT-JgG"; */
+"WVW-dT-JgG.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bBX-Nf-TQH"; */
+"bBX-Nf-TQH.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Dowload"; ObjectID = "bJh-Ik-ne4"; */
+"bJh-Ik-ne4.normalTitle" = "Dowload";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bKa-zR-yYt"; */
+"bKa-zR-yYt.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "d3S-is-Cim"; */
+"d3S-is-Cim.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fX7-VU-V7Z"; */
+"fX7-VU-V7Z.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Open File"; ObjectID = "lme-FT-8BS"; */
+"lme-FT-8BS.normalTitle" = "Open File";
+
+/* Class = "UIButton"; normalTitle = "ADD"; ObjectID = "oeR-1k-FGf"; */
+"oeR-1k-FGf.normalTitle" = "ADD";
+
+/* Class = "UILabel"; text = "lbSinger"; ObjectID = "yU8-dV-Eos"; */
+"yU8-dV-Eos.text" = "lbSinger";
+
+/* Class = "UIButton"; normalTitle = "Unzip"; ObjectID = "yhp-Na-N9y"; */
+"yhp-Na-N9y.normalTitle" = "Unzip";
