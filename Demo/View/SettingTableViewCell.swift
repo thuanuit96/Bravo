@@ -21,19 +21,9 @@ class SettingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
     @IBOutlet weak var bntLogout: UIButton!
     @IBOutlet weak var lbAccount: UILabel!
-    
     @IBOutlet weak var lbChangeLg: UILabel!
-    
-    @IBAction func btnLogout(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func btnChangeLg(_ sender: UIButton) {
-        print("change languge")
-    }
-    
+    @IBOutlet weak var btnChangeLg: UIButton!
     
 }

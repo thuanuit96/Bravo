@@ -20,12 +20,12 @@ class ListMusicViewController: UIViewController {
     var test2 :MusicData?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loadData()
+        title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "Management", comment: "")
+
     }
     
-    func loadData()  {
-        
+    static func loadData()  {
+
         
     }
         

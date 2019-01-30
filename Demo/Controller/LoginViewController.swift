@@ -20,8 +20,10 @@ class LoginViewController: UIViewController{
         txtEmail.layer.borderColor = UIColor.lightGray.cgColor
         txtPassword.layer.borderWidth = 1
         txtPassword.layer.borderColor = UIColor.lightGray.cgColor
-        
+        //Set language for layout
+        setLanguage()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         
         // add icon into textfield
@@ -33,29 +35,24 @@ class LoginViewController: UIViewController{
         passWordIconView.image = UIImage(named: "password-icon")
         txtEmail.leftView = emailIconView
         txtPassword.leftView = passWordIconView
+        txtEmail.isUserInteractionEnabled = true
         //Fix position logo
         self.Logo.center = CGPoint(x: self.boxLogo.frame.size.width  / 2,
                                    y: self.boxLogo.frame.size.height / 2)
     }
     
-    
     @IBOutlet weak var lblError: UILabel!
     @IBOutlet weak var labelMessage: UILabel!
     @IBOutlet weak var txtEmail: UITextField!
-    
     @IBOutlet weak var txtPassword: UITextField!
-    
     @IBOutlet weak var Logo: UIImageView!
-    
     @IBOutlet weak var boxLogo: UIView!
-    @IBOutlet weak var messageView: UIView!
-    
-    
-    
+    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnChangeLanguage: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBAction func editEmail(_ sender: UITextField) {
         labelMessage.isHidden = true
         lblError.isHidden = true
-        
     }
     
     @IBAction func editPassword(_ sender: UITextField) {
@@ -63,8 +60,8 @@ class LoginViewController: UIViewController{
         lblError.isHidden = true
     }
     
-    
     @IBAction func pressSignin(_ sender: UIButton) {
+        
         var isSuccess = false
         if let path = Bundle.main.path(forResource: "test", ofType: "json") {
             do {
@@ -84,48 +81,48 @@ class LoginViewController: UIViewController{
         }
         
         if !isSuccess {
-        
+            
             //show notity
-            labelMessage.text = "ログインできません。"
-            lblError.text = "正しいアドレスまたパスワードを入力してください。"
-            lblError.numberOfLines = 2
-            lblError.sizeToFit()
-            labelMessage.textColor = UIColor.red
-            lblError.textColor = UIColor.red
             labelMessage.isHidden = false
             lblError.isHidden = false
-            
-            //            let centerX = NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: messageView, attribute: .centerX, multiplier: 1, constant: 0)
-            //            let centerY = NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: messageView, attribute: .centerY, multiplier: 1, constant: 0)
-            //            let width = NSLayoutConstraint(item: label, attribute: .width, relatedBy: .equal, toItem: messageView, attribute: .width, multiplier: 1, constant: 0)
-            //            let height = NSLayoutConstraint(item: label, attribute: .height, relatedBy: .equal, toItem: messageView, attribute: .height, multiplier: 1, constant: 0)
-            
-            //            self.messageView.addSubview(label)
-            //            self.messageView.addConstraints([centerY,centerX,width,height])
-            
-        }
-            
-        else {
-            
+        } else {
             saveLoggedState()
-            
             //Swap to library screen
             self.performSegue(withIdentifier: "tabbar", sender: nil)
-
-           
-            
         }
     }
     
+    @IBAction func btnChangeLanguage(_ sender: UIButton) {
+        //Switch language
+        LocalizationSystem.sharedInstance.switchLanguage()
+        //Set language for UI
+        setLanguage()
+    }
     /// call if user logged in
     func saveLoggedState() {
-        
-        let def = UserDefaults.standard
-        def.set(true, forKey: "is_authenticated") // save true flag to UserDefaults
-        def.synchronize()
+        var userInfo: Dictionary<String,String> = [:]
+        userInfo["name"] = self.txtEmail.text
+        userInfo["password"] = self.txtPassword.text
+        userInfo["uiid"] = UIDevice.current.identifierForVendor?.uuidString
+        UserDefaults.standard.set(userInfo, forKey: "userInfo")
+        let result = UserDefaults.standard.value(forKey: "userInfo")
         
     }
     
+    func setLanguage() {
+        title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "Management", comment: "")
+
+        txtEmail.placeholder = LocalizationSystem.sharedInstance.localizedStringForKey(key: "email", comment: "")
+        txtPassword.placeholder = LocalizationSystem.sharedInstance.localizedStringForKey(key: "password", comment: "")
+        btnLogin.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "login", comment: ""), for: .normal)
+        btnChangeLanguage.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "changeLanguage", comment: ""), for: .normal)
+        lblError.lineBreakMode = .byWordWrapping
+        lblError.numberOfLines = 2
+        labelMessage.textColor = UIColor.red
+        lblError.textColor = UIColor.red
+        labelMessage.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "message", comment: "")
+        lblError.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "error", comment: "")
+    }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: nil) { _ in

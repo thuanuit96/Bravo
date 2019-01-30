@@ -1,4 +1,7 @@
 
+/* Class = "UIButton"; normalTitle = "ログイン"; ObjectID = "0hO-ce-VAO"; */
+"0hO-ce-VAO.normalTitle" = "ログイン";
+
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2MO-cb-zj5"; */
 "2MO-cb-zj5.normalTitle" = "Button";
 
@@ -14,9 +17,6 @@
 /* Class = "UIButton"; normalTitle = "Change language"; ObjectID = "5L7-0a-tLh"; */
 "5L7-0a-tLh.normalTitle" = "Change language";
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "6RA-Br-GCY"; */
-"6RA-Br-GCY.text" = "Label";
-
 /* Class = "UILabel"; text = "lbName"; ObjectID = "7HY-YC-Mjg"; */
 "7HY-YC-Mjg.text" = "lbName";
 
@@ -26,8 +26,23 @@
 /* Class = "UILabel"; text = "Label"; ObjectID = "DEq-VS-d8H"; */
 "DEq-VS-d8H.text" = "Label";
 
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "EaE-d3-FLv"; */
+"EaE-d3-FLv.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "Gqy-nx-H3L"; */
+"Gqy-nx-H3L.normalTitle" = "Register";
+
+/* Class = "UIButton"; normalTitle = "言語"; ObjectID = "HVE-aH-FmV"; */
+"HVE-aH-FmV.normalTitle" = "言語";
+
+/* Class = "UITabBarItem"; title = "ライブラリ"; ObjectID = "IiQ-LR-3ra"; */
+"IiQ-LR-3ra.title" = "ライブラリ";
+
 /* Class = "UILabel"; text = "lbEnd"; ObjectID = "Izj-eM-s3M"; */
 "Izj-eM-s3M.text" = "lbEnd";
+
+/* Class = "UITabBarItem"; title = "動画リスト"; ObjectID = "Jec-5d-ny3"; */
+"Jec-5d-ny3.title" = "動画リスト";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "MkR-En-dYg"; */
 "MkR-En-dYg.normalTitle" = "Button";
@@ -35,8 +50,8 @@
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "P3a-YF-kIn"; */
 "P3a-YF-kIn.normalTitle" = "Button";
 
-/* Class = "UIButton"; normalTitle = "Dowload"; ObjectID = "QSp-gS-4Xj"; */
-"QSp-gS-4Xj.normalTitle" = "Dowload";
+/* Class = "UITextField"; text = "Welcome"; ObjectID = "QGj-rM-uoh"; */
+"QGj-rM-uoh.text" = "Welcome";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Sdf-oh-mJC"; */
 "Sdf-oh-mJC.normalTitle" = "Button";
@@ -47,6 +62,15 @@
 /* Class = "UILabel"; text = "Label"; ObjectID = "WVW-dT-JgG"; */
 "WVW-dT-JgG.text" = "Label";
 
+/* Class = "UITextField"; placeholder = "User name"; ObjectID = "Wc0-mx-O0H"; */
+"Wc0-mx-O0H.placeholder" = "User name";
+
+/* Class = "UIButton"; normalTitle = "ログアウト"; ObjectID = "ajq-Nt-lvd"; */
+"ajq-Nt-lvd.normalTitle" = "ログアウト";
+
+/* Class = "UITabBarItem"; title = "プレイリスト"; ObjectID = "b0h-kH-Cd7"; */
+"b0h-kH-Cd7.title" = "プレイリスト";
+
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bBX-Nf-TQH"; */
 "bBX-Nf-TQH.normalTitle" = "Button";
 
@@ -56,17 +80,56 @@
 /* Class = "UILabel"; text = "Label"; ObjectID = "bKa-zR-yYt"; */
 "bKa-zR-yYt.text" = "Label";
 
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "cg8-ys-aaq"; */
+"cg8-ys-aaq.text" = "Welcome";
+
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "d3S-is-Cim"; */
 "d3S-is-Cim.normalTitle" = "Button";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fX7-VU-V7Z"; */
 "fX7-VU-V7Z.normalTitle" = "Button";
 
+/* Class = "UIButton"; normalTitle = "言語"; ObjectID = "fXM-ub-DZI"; */
+"fXM-ub-DZI.normalTitle" = "言語";
+
 /* Class = "UIButton"; normalTitle = "Open File"; ObjectID = "lme-FT-8BS"; */
 "lme-FT-8BS.normalTitle" = "Open File";
 
+/* Class = "UILabel"; text = "設定"; ObjectID = "obW-6n-CPK"; */
+"obW-6n-CPK.text" = "設定";
+
+/* Class = "UILabel"; text = "lbMessage"; ObjectID = "oce-7u-3ew"; */
+"oce-7u-3ew.text" = "lbMessage";
+
 /* Class = "UIButton"; normalTitle = "ADD"; ObjectID = "oeR-1k-FGf"; */
 "oeR-1k-FGf.normalTitle" = "ADD";
+
+/* Class = "UITextField"; placeholder = "メールアドレス"; ObjectID = "ofu-iL-XB2"; */
+"ofu-iL-XB2.placeholder" = "メールアドレス";
+
+/* Class = "UILabel"; text = "lbMessage"; ObjectID = "om0-Mu-8Zr"; */
+"om0-Mu-8Zr.text" = "lbMessage";
+
+/* Class = "UILabel"; text = "アカウント"; ObjectID = "r1A-UE-1sl"; */
+"r1A-UE-1sl.text" = "アカウント";
+
+/* Class = "UITabBarItem"; title = "管理"; ObjectID = "rmN-MW-JmS"; */
+"rmN-MW-JmS.title" = "管理";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "sLG-Xb-oRV"; */
+"sLG-Xb-oRV.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Get device"; ObjectID = "tya-n7-F9n"; */
+"tya-n7-F9n.normalTitle" = "Get device";
+
+/* Class = "UISegmentedControl"; uXk-rj-lTo.segmentTitles[0] = "En"; ObjectID = "uXk-rj-lTo"; */
+"uXk-rj-lTo.segmentTitles[0]" = "En";
+
+/* Class = "UISegmentedControl"; uXk-rj-lTo.segmentTitles[1] = "JA"; ObjectID = "uXk-rj-lTo"; */
+"uXk-rj-lTo.segmentTitles[1]" = "JA";
+
+/* Class = "UITextField"; placeholder = "パスワード"; ObjectID = "vZF-0r-3LN"; */
+"vZF-0r-3LN.placeholder" = "パスワード";
 
 /* Class = "UILabel"; text = "lbSinger"; ObjectID = "yU8-dV-Eos"; */
 "yU8-dV-Eos.text" = "lbSinger";

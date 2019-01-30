@@ -2,9 +2,26 @@
   Localizable.strings
   Demo
 
-  Created by asto on 1/14/19.
+  Created by asto on 1/28/19.
   Copyright © 2019 asto. All rights reserved.
 */
+//Login screen
+"email" = "メールアドレス";
+"password" = "パスワード";
+"login" = "ログイン";
+"message" = "ログインできません。";
+"error" = "正しいアドレスまたパスワードを入力してください。";
+"changeLanguage" = "言語";
+//Setting screen
+"Account" = "アカウント";
+"Logout" = "ログアウト";
+"Setting" = "設定";
+"Language" = "言語";
+//Tabbar
+"Playlist" = "プレイリスト";
+"Library" = "ライブラリ";
+"Videos" = "動画リスト";
+"Management" = "管理";
 
-Welcome = "共有アプリケーション";
-Download = "アプリケーション";
+
+

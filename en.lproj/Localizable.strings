@@ -2,10 +2,14 @@
   Localizable.strings
   Demo
 
-  Created by asto on 1/14/19.
+  Created by asto on 1/28/19.
   Copyright © 2019 asto. All rights reserved.
 */
-
-Welcome = "welcome";
-Download = "Download";
-
+//Login screen
+"email" = "Email";
+"password" = "Password";
+"login" = "Login";
+"message" = "Can't login.";
+"error" = "Please enter the correct address and password.";
+"changeLanguage" = "Language";
+//Setting screen

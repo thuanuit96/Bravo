@@ -17,7 +17,11 @@ class SettingViewController: UIViewController ,UITableViewDataSource,UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingtableviewcell", for: indexPath) as! SettingTableViewCell
-        cell.lbAccount.text = "アカウント"
+        cell.bntLogout.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "Logout", comment: ""), for: .normal)
+        cell.lbAccount.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "Account", comment: "")
+        cell.lbChangeLg.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "Setting", comment: "")
+        cell.btnChangeLg.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "Language", comment: ""), for: .normal)
+        
         //remove border if row empty
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
@@ -27,13 +31,13 @@ class SettingViewController: UIViewController ,UITableViewDataSource,UITableView
         let lbAccountFrame = cell.lbAccount.frame
         let bottomLayerAccount = CALayer()
         bottomLayerAccount.frame = CGRect(x: 0, y: lbAccountFrame.height, width: lbAccountFrame.width
-            , height: 3)
+            , height: 2)
         bottomLayerAccount.backgroundColor = UIColor.lightGray.cgColor
         cell.lbAccount.layer.addSublayer(bottomLayerAccount)
         let lbChangeLgFrame = cell.lbChangeLg.frame
         let bottomLayerChangeLg = CALayer()
         bottomLayerChangeLg.frame = CGRect(x: 0, y: lbChangeLgFrame.height, width: lbChangeLgFrame.width
-            , height: 3)
+            , height: 2)
         bottomLayerChangeLg.backgroundColor = UIColor.lightGray.cgColor
         cell.lbChangeLg.layer.addSublayer(bottomLayerChangeLg)
         
@@ -41,48 +45,42 @@ class SettingViewController: UIViewController ,UITableViewDataSource,UITableView
         customCell = cell
         return cell
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //set layout for tableView
         self.settingTableView.rowHeight = 140
         self.settingTableView.separatorStyle = UITableViewCellSeparatorStyle.none
         settingTableView.dataSource = self
-        
-        
-        
+        title = LocalizationSystem.sharedInstance.localizedStringForKey(key: "Management", comment: "")
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
-        
         settingTableView.reloadData()
-        
     }
     @IBOutlet weak var settingTableView: UITableView!
-    @IBOutlet weak var lbAccount: UILabel!
-    
-    @IBOutlet weak var lbChangeLg: UILabel!
-    
     @IBAction func testlogout(_ sender: UIButton) {
-        print("logout")
+        
         let def = UserDefaults.standard
-        
-        def.set(true, forKey: "is_authenticated") // save true flag to UserDefaults
-        
-        let is_authenticated = def.bool(forKey: "is_authenticated") // return false if not found or stored value
-        
-        if is_authenticated {
-            print(is_authenticated)
-             def.set(false, forKey: "is_authenticated")
-
+        let user = def.value(forKey: "userInfo") as! Dictionary<String, String>
+        if !user.isEmpty {
             // user logged in
+            def.removeObject(forKey: "userInfo")
+            def.synchronize()
             let LoginController = self.storyboard?.instantiateViewController(withIdentifier: "loginScreen") as? LoginViewController
-            present(LoginController!, animated: true,completion: nil)
-            
-            
+            present(LoginController!, animated: false,completion: nil)
         }
+    }
+    @IBAction func changeLanguage(_ sender: UIButton) {
+        
+        //Switch language
+        LocalizationSystem.sharedInstance.switchLanguage()
+        //Set language for UI
+        //UIApplication.shared.keyWindow?.rootViewController = storyboard!.instantiateViewController(withIdentifier: "tabbar")
+        let tabbar = storyboard!.instantiateViewController(withIdentifier: "tabbar") as! TabbarViewController
+        tabbar.selectedIndex = 3
+        self.present(tabbar, animated: false, completion: nil)
+        viewDidLoad()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
