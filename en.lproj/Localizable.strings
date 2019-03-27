@@ -10,6 +10,8 @@
 "password" = "Password";
 "login" = "Login";
 "message" = "Can't login.";
+"erro1r" = "Please enter the 1correct address and password.";
+
 "error" = "Please enter the correct address and password.";
 "changeLanguage" = "Language";
 //Setting screen
