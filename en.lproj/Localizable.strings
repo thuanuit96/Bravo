@@ -12,4 +12,6 @@
 "message" = "Can't login.";
 "error" = "Please enter the correct address and password.";
 "changeLanguage" = "Language";
+"changeLanguage1" = "Lang1uage";
+
 //Setting screen
